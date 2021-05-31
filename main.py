@@ -52,7 +52,7 @@ class WebhookServer(object):
 if __name__ == '__main__':
     cherrypy.config.update({
         'server.socket_host': WEBHOOK_LISTEN,
-        'server.socket.port': WEBHOOK_PORT,
+        'server.socket_port': WEBHOOK_PORT,
         'server.ssl_module': 'builtin',
         'server.sslcertificate': WEBHOOK_SSL_CERT,
         'server.ssl_privat_key': WEBHOOK_SSL_PRIV,
