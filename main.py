@@ -50,6 +50,9 @@ class WebhookServer(object):
 
 
 if __name__ == '__main__':
+    bot_test.delete_webhook()
+    bot_test.set_webhook(url='https://135.181.77.245/bot_test', certificate=open(WEBHOOK_SSL_CERT, 'r'))
+
     cherrypy.config.update({
         'server.socket_host': WEBHOOK_LISTEN,
         'server.socket_port': WEBHOOK_PORT,
